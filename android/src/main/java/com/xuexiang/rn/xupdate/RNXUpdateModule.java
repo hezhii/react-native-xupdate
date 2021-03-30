@@ -91,10 +91,10 @@ public class RNXUpdateModule extends ReactContextBaseJavaModule {
                     //这个必须设置！实现网络请求功能。
                     .setIUpdateHttpService(new OKHttpUpdateHttpService(timeout, isPostJson));
 
-            ReadableMap params = map.getMap("params");
-            if (params != null) {
-                XUpdate.get().params(params.toHashMap());
-            }
+            // ReadableMap params = map.getMap("params");
+            // if (params != null) {
+            //     XUpdate.get().params(params.toHashMap());
+            // }
             XUpdate.get().init((Application) mApplication.getApplicationContext());
 
             WritableMap result = Arguments.createMap();
